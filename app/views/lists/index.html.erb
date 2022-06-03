@@ -1,0 +1,22 @@
+<div class="background-black">
+    <div class="banner" style="background-image: linear-gradient(rgb(0 0 0 / 60%),rgb(0 0 0 / 66%)), url(https://imgsrc.cineserie.com/2021/03/the-walking-dead-robert-kirkman-balance-des-infos-sur-le-film-1.jpg?ver=1);">
+      <div class="container">
+
+        <h1>WAGONFLIX</h1>
+        <p>Change your life, learn to add a cateogry.</p>
+        <%= link_to "Add a category", new_list_path, class: "btn btn-dark border-rounded-3" %>
+      </div>
+    </div>
+    <h2>My list</h2>
+    <div class="cards">
+      <% @lists.each do |list| %>
+        <%= link_to list_path(list), :action => 'go' do %>
+        <div class="card-category" style="background-image: linear-gradient(rgb(0 0 0 / 60%),rgb(0 0 0 / 66%)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <h3><%= list.name %></h3>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+</div>
+
+<footer></footer>

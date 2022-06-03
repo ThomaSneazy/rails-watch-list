@@ -1,0 +1,23 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "form_legend_clear";
+@import "navbar";
+@import "banner";
+@import "card";
+body{
+  background-color: black;
+}
+
+.background-black{
+  background-color: black;
+  height: 100%;
+}
+h2{
+  color: white;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.bg-black-show{
+  background-color: black;
+}

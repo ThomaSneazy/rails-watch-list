@@ -1,0 +1,28 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+
+// Define fonts for body and headers
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+h1{
+  color: white;
+}
+
+h3{
+  text-decoration: underline overline #FF3028;
+  padding-bottom: 2px;
+}
+
+.title-show{
+  color: rgb(245, 245, 245);
+}

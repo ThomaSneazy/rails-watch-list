@@ -8,21 +8,22 @@
     </div>
      <div class="bg-black-show">
 
-     <h2 class="title-show">Your movies <%= @list.name %> list</h2>
-<% @list.movies.each do |movie| %>
-      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-        <div class="bg-white rounded shadow h-50 w-50 m-4">
-          <%= image_tag movie.poster_url, alt: movie.title, class: "movie-img rounded-top w-100" %>
-          <div class="p-3 rounded-bottom d-flex flex-column">
-            <strong><%= movie.title %> <span class="text-muted font-weight-normal">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
-            <small class="text-muted"><%= movie.overview %></small>
-            <div class="d-flex align-items-end justify-content-between pt-4">
-              <div>
-                <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
+    <h2 class="title-show">Your movies <%= @list.name %> list</h2>
+     <div class="card-show">
+      <% @list.movies.each do |movie| %>
+            <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+              <div id="card-show-border" class="bg-white rounded shadow h-50 w-50 m-4">
+                <%= image_tag movie.poster_url, alt: movie.title, class: "movie-img rounded-top w-100" %>
+                <div  class="p-3 bg-white rounded-bottom d-flex flex-column">
+                  <strong><%= movie.title %> <span class="text-muted font-weight-normal">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
+                  <small class="text-muted"><%= movie.overview %></small>
+                  <div class="d-flex align-items-end justify-content-between pt-4">
+                    <div>
+                      <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
+                    </div>
+                    <small class="text-right flex-shrink-0"><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-dark' %></small>
+                  </div>
+                </div>
               </div>
-              <small class="text-right flex-shrink-0"><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-dark' %></small>
-            </div>
-          </div>
-        </div>
-   </div>
   <% end %>
+     </div>

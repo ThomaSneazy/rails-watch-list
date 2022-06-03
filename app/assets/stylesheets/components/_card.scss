@@ -6,6 +6,19 @@
   justify-items: center;
 }
 
+.card-show{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 20px;
+  justify-items: center;
+}
+
+#card-show-border{
+  border: 1px solid white;
+  box-shadow: 10px 5px 5px rgb(255, 255, 255);
+}
+
 
 .card-category {
   background-size: cover;
